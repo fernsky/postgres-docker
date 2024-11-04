@@ -1,7 +1,8 @@
 services:
   postgres:
-        image: postgres:16.4
-        container_name: postgres
+        image: postgis/postgis
+        container_name: ${HOSTNAME}
+        restart: always
         environment:
             POSTGRES_DB: ${POSTGRES_DB}
             POSTGRES_USER: ${POSTGRES_USER}
